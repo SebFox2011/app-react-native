@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {View,Text,FlatList,Button,TextInput} from 'react-native'
+import {View,Text,FlatList,Button,Switch} from 'react-native'
 import MovieItem from "../components/MovieItem";
+import TextInput from "../kitui/TextInput";
 
 class Home extends Component {
     constructor(props) {
@@ -44,6 +45,7 @@ class Home extends Component {
                 <TextInput value={this.state.title} placeholder={'Ajouter le titre du film'}
                     onChangeText={text => this.setState({title:text})}
                 />
+                <Switch/>
                 <TextInput value={this.state.year} keyborardType='numeric'
                     onChangeText={text => this.setState({year:text})}
                 />
@@ -52,6 +54,7 @@ class Home extends Component {
                     color="#000"
                     onPress={() => this.addFilm()} // fonction fléchée pour garder le contexte
                 />
+
             </View>
         );
     }
