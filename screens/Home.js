@@ -30,6 +30,7 @@ class Home extends Component {
                 <FlatList
                     data={this.state.movies}
                     renderItem={({item}) => <MovieItem movie={item}/>}
+                    keyExtractor={(item,index) => index.toString()}
                 />
             </View>
         );

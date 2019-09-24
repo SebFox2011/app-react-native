@@ -5,8 +5,7 @@ class MovieItem extends Component {
     render() {
         return (
             <View>
-                <Text>{this.props.movie.title}</Text>
-                <Text>{this.props.movie.year}</Text>
+                <Text>{this.props.movie.title + this.props.movie.year}</Text>
             </View>
         );
     }
