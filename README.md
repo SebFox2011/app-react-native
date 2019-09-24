@@ -14,3 +14,5 @@ puis créer le fichier .babelrc à la racine du projet et y mettre ces lignes de
 }
 
 puis créer le fichier .env et ses variables
+
+npm install expo-constant
