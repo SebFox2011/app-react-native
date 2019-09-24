@@ -1,13 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, Platform } from 'react-native';
+import { StyleSheet, Text, View, Platform,KeyboardAvoidingView } from 'react-native';
 import Constants from "expo-constants/src/Constants";
 import Home from "./screens/Home"
 
 export default function App() {
   return (
-    <View style={styles.container}>
+      //KeyboardAvoindinfView, pousse le contenu vers le haut si le clavier s'affiche.
+    <KeyboardAvoidingView style={styles.container} behavior="padding">
       <Home/>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
