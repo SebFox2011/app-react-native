@@ -8,7 +8,9 @@ class TextInput extends Component {
             <DefaultTextInput style={
                 {backgroundColor:'white',
                 padding:10,
-                margin:10}
+                margin:10,
+                borderWidth:1,
+                }
             } {...this.props}/>
             //...this.props permet de transférer les props du composants parent
         );

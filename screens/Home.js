@@ -18,7 +18,6 @@ class Home extends Component {
     }
 
     fetchCompanies(){
-        console.log(process.env.API_URL+'/companies?page='+this.state.page);
         fetch(process.env.API_URL+'/companies?page='+this.state.page)
             .then(response => response.json())
             .then(companies => this.setState({ // ajoute les companies en chargeant page/page
