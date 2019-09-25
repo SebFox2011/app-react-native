@@ -40,3 +40,7 @@ npm install react-navigation-stack
 ## Modifier le header bar
 https://reactnavigation.org/docs/en/headers.html
 
+
+## linear gradient
+https://docs.expo.io/versions/latest/sdk/linear-gradient/
+
