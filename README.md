@@ -37,3 +37,6 @@ pour un tabNavigator
 Ajouter de la configuration menu comme indiquée dans navigation.png :
 npm install react-navigation-stack
 
+## Modifier le header bar
+https://reactnavigation.org/docs/en/headers.html
+

@@ -4,6 +4,10 @@ import TextInput from "../kitui/TextInput";
 import CompanieItem from "../components/CompanieItem";
 
 class Search extends Component {
+    static navigationOptions = {
+      title: 'Rechercher une entreprise'
+    };
+
     constructor(props) {
         super(props);
         this.state = {
