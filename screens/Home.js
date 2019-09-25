@@ -1,29 +1,29 @@
 import React, {Component} from 'react';
 import {View,Text,FlatList,Button,Switch} from 'react-native'
-import MovieItem from "../components/MovieItem";
 import TextInput from "../kitui/TextInput";
+import CompanieItem from "../components/CompanieItem";
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            movies : [],
-            title: '',
-            year: new Date().getFullYear().toString()
+            companies : []
         };
     }
 
-    componentDidMount() {
-        this.setState({
-            movies: [
-                {title:'Titanic',year: 1988},
-                {title:'Intouchables',year: 2015},
-                {title:'StarWars',year: 1970},
-                {title:'StarTrek',year: 1975}
 
-            ]
-        })
+    componentDidMount() {
+        this.fetchCompanies();
     }
+
+    fetchCompanies(){
+        console.log(process.env.API_URL+'/companies');
+        fetch(process.env.API_URL+'/companies')
+            .then(response => response.json())
+            .then(companies => this.setState({ // ajoute les companies en chargeant page/page
+                companies: [...this.state.companies,...companies]
+            }))
+    };
 
     addFilm(){
         const movie = {title:this.state.title, year:this.state.year};
@@ -38,8 +38,8 @@ class Home extends Component {
                 <Text>Home</Text>
 
                 <FlatList
-                    data={this.state.movies}
-                    renderItem={({item}) => <MovieItem movie={item}/>}
+                    data={this.state.companies}
+                    renderItem={({item}) => <CompanieItem companie={item}/>}
                     keyExtractor={(item,index) => index.toString()}
                 />
                 <TextInput value={this.state.title} placeholder={'Ajouter le titre du film'}
