@@ -7,7 +7,8 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            companies : []
+            companies : [],
+            page:1
         };
     }
 
@@ -17,8 +18,8 @@ class Home extends Component {
     }
 
     fetchCompanies(){
-        console.log(process.env.API_URL+'/companies');
-        fetch(process.env.API_URL+'/companies')
+        console.log(process.env.API_URL+'/companies?page='+this.state.page);
+        fetch(process.env.API_URL+'/companies?page='+this.state.page)
             .then(response => response.json())
             .then(companies => this.setState({ // ajoute les companies en chargeant page/page
                 companies: [...this.state.companies,...companies]
@@ -42,6 +43,10 @@ class Home extends Component {
                     renderItem={({item}) => <CompanieItem companie={item}/>}
                     keyExtractor={(item,index) => index.toString()}
                 />
+                <Button
+                    onPress={() => this.setState({page : this.state.page +1},
+                        ()=> this.fetchCompanies())}
+                    title={'Charger la suite'}/>
                 <TextInput value={this.state.title} placeholder={'Ajouter le titre du film'}
                     onChangeText={text => this.setState({title:text})}
                 />
