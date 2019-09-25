@@ -37,7 +37,6 @@ class Home extends Component {
         return (
             <View>
                 <Text>Home</Text>
-
                 <FlatList
                     data={this.state.companies}
                     renderItem={({item}) => <CompanieItem companie={item}/>}
@@ -59,7 +58,6 @@ class Home extends Component {
                     color="#000"
                     onPress={() => this.addFilm()} // fonction fléchée pour garder le contexte
                 />
-
             </View>
         );
     }

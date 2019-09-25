@@ -23,3 +23,13 @@ permet d'utiliser statusBarHeight pour démarrer l'affichage en dessous de la ba
 
 ## Creer des vues
 Creer un dossier screen dans lequel seront posés les fiocheirs d'écran
+
+## Navigation
+npm install react-navigation et npm install react-navigation-drawer
+npm install react-native-gesture-handler
+npm install react-native-reanimated
+npm install react-native-screens
+expo install react-native-gesture-handler react-native-reanimated
+
+Créer un dossier navigation et un fichier AppNavigator
+pour un tabNavigator
