@@ -33,3 +33,7 @@ expo install react-native-gesture-handler react-native-reanimated
 
 Créer un dossier navigation et un fichier AppNavigator
 pour un tabNavigator
+
+Ajouter de la configuration menu comme indiquée dans navigation.png :
+npm install react-navigation-stack
+

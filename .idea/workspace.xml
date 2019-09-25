@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d0bb83-e47e-4929-b8de-a1b84e8ecd77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/navigation/AppNavigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Navigation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/navigation/SearchNavigator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/Company.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +28,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1RHEjMqI6l9y4nAKWNv9U2OUD9r" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -55,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569315754081</updated>
       <workItem from="1569315755430" duration="13871000" />
-      <workItem from="1569395487718" duration="8666000" />
+      <workItem from="1569395487718" duration="9794000" />
     </task>
     <servers />
   </component>
@@ -77,5 +82,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
