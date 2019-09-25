@@ -4,11 +4,13 @@ import Constants from "expo-constants/src/Constants";
 
 class CompanieItem extends Component {
     render() {
+        let button = null;
+        if (this.props.onClick)
+            button = <Button onPress={() => this.props.onClick()} title={'voir plus'} />
         return (
             <View style={styles.container}>
                 <Text>{this.props.companie.twitter_username+' '+this.props.companie.name}</Text>
-                <Button onPress={() => this.props.onClick()}
-                        title={'voir plus'} />
+                {button}
             </View>
         );
     }
