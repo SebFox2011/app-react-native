@@ -4,7 +4,7 @@ import CompanyScreen from "../screens/Company";
 
 const SearchNavigator = {
     Search:Searchscreen,
-    Compagny:CompanyScreen
+    Company:CompanyScreen
 };
 
 export default createStackNavigator (SearchNavigator)

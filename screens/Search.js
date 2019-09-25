@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View,Text,FlatList} from "react-native";
+import {View, Text, FlatList} from "react-native";
 import TextInput from "../kitui/TextInput";
 import CompanieItem from "../components/CompanieItem";
 
@@ -7,16 +7,16 @@ class Search extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            result:'',
-            companies:[]
+            result: '',
+            companies: []
         };
     }
 
-    searchChangeText (text){
-        fetch(process.env.API_URL+'/companies?search='+text)
+    searchChangeText(text) {
+        fetch(process.env.API_URL + '/companies?search=' + text)
             .then(response => response.json())
-            .then(companies => this.setState({companies:companies}))
-       this.setState({result:text})
+            .then(companies => this.setState({companies: companies}));
+        this.setState({result: text})
     }
 
     render() {
@@ -28,8 +28,9 @@ class Search extends Component {
                 />
                 <FlatList
                     data={this.state.companies}
-                    renderItem={({item}) => <CompanieItem companie={item}/>}
-                    keyExtractor={(item,index) => index.toString()}
+                    renderItem={({item}) => <CompanieItem companie={item}
+                          onClick={() => this.props.navigation.navigate('Company', {company:item})}/>}
+                    keyExtractor={(item, index) => index.toString()}
 
                 />
             </View>
