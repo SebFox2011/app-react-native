@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d0bb83-e47e-4929-b8de-a1b84e8ecd77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Navigation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navigation/SearchNavigator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Company.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screens/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Search.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569315754081</updated>
       <workItem from="1569315755430" duration="13871000" />
-      <workItem from="1569395487718" duration="9794000" />
+      <workItem from="1569395487718" duration="11890000" />
     </task>
     <servers />
   </component>
