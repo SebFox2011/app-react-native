@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29d0bb83-e47e-4929-b8de-a1b84e8ecd77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/screens/NewCompany.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icon1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/splash1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/stormtrooper.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigation/AppNavigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigation/AppNavigator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CompanieItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/CompanieItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Company.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Company.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/NewCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/NewCompany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/Search.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +62,9 @@
       <option name="presentableId" value="Default" />
       <updated>1569315754081</updated>
       <workItem from="1569315755430" duration="13871000" />
-      <workItem from="1569395487718" duration="17229000" />
+      <workItem from="1569395487718" duration="17710000" />
+      <workItem from="1569482425194" duration="4896000" />
+      <workItem from="1569488631826" duration="2516000" />
     </task>
     <servers />
   </component>

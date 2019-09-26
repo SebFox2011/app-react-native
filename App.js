@@ -16,7 +16,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffb664',
+    backgroundColor: 'rgba(155,238,239,0.67)',
     // alignItems: 'center', // A enlever pour afficher les menus
     justifyContent: 'center',
     marginTop:Constants.statusBarHeight// Permet de définir l'écran de l'application

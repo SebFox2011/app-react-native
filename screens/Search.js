@@ -26,7 +26,6 @@ class Search extends Component {
     render() {
         return (
             <View>
-                <Text>Search Screen</Text>
                 <TextInput value={this.state.result} placeholder={'Entreprise à rechercher'}
                            onChangeText={text => this.searchChangeText(text)}
                 />
