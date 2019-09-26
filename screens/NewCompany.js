@@ -8,8 +8,8 @@ class NewCompany extends Component {
         this.state = {
             name:'',
             category_code:'',
-            number_of_employees:0,
-            founded_year:0,
+            number_of_employees:'',
+            founded_year:'',
             total_money_raised:'',
             phone_number:'',
             email_address:'',
@@ -25,14 +25,15 @@ class NewCompany extends Component {
                 'Content-Type':'application/json'
             },
             body:JSON.stringify(
-                {name:this.state.name},
-                {name:this.state.category_code},
-                {name:this.state.number_of_employees},
-                {name:this.state.founded_year},
-                {name:this.state.total_money_raised},
-                {name:this.state.phone_number},
-                {name:this.state.email_address},
-                {name:this.state.homepage_url},
+                {
+                    name:this.state.name,
+                    category_code:this.state.category_code,
+                    number_of_employees:this.state.number_of_employees,
+                    founded_year:this.state.founded_year,
+                    total_money_raised:this.state.total_money_raised,
+                    phone_number:this.state.phone_number,
+                    email_address:this.state.email_address,
+                    homepage_url:this.state.homepage_url}
                 )
         });
     }
