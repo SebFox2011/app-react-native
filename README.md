@@ -22,7 +22,7 @@ npm install expo-constant
 permet d'utiliser statusBarHeight pour démarrer l'affichage en dessous de la barre des taches.
 
 ## Creer des vues
-Creer un dossier screen dans lequel seront posés les fiocheirs d'écran
+Creer un dossier screen dans lequel seront posés les fichiers d'écran
 
 ## Navigation
 npm install react-navigation et npm install react-navigation-drawer

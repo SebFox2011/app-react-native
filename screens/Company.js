@@ -1,12 +1,40 @@
 import React, {Component} from 'react';
-import {View,Text,StyleSheet,ScrollView} from "react-native";
+import {View,Text,StyleSheet,ScrollView,Button} from "react-native";
 
 class Company extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            id:0
+        }
+    }
 
-    static navigationOptions = ({navigation}) => {
+
+   /* static navigationOptions = ({navigation}) => {
         return {
             title: navigation.getParam('company').name
         }
+    };*/
+
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: navigation.getParam('company').name,
+            headerRight: (<Button title="Supprimer" onPress={() => {
+                const company = navigation.getParam('company');
+                fetch(process.env.API_URL + '/companies/' + company._id, { method: 'delete' })
+                    .then(response => response.json())
+                    .then(data => navigation.navigate('Search'))
+                    .catch(err => console.log(err))
+                ;
+            }} />)
+        }
+    };
+
+    delete(id) {
+        console.log(id);
+        fetch(process.env.API_URL+'/companies/' + id, {
+            method: 'delete'
+        });
     }
     render() {
         const company = this.props.navigation.getParam('company');
@@ -15,6 +43,7 @@ class Company extends Component {
             <ScrollView>
                 <View>
                     <Text style={styles.text_name}>{company.name}</Text>
+                    <Button onPress={(id)=>this.delete(company._id)} title='supprimer'/>
                 </View>
                 <View>
                     <Text style={styles.text_category}>{company.category_code}</Text>
@@ -29,8 +58,6 @@ class Company extends Component {
                         <Text>Phone: {company.phone_number}</Text>
                         <Text>Mail: {company.email_address}</Text>
                         <Text>Website: {company.homepage_url}</Text>
-
-
                     </View>
                 </View>
                 <Text style={styles.description}>{company.overview}</Text>
