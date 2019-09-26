@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View,Text,FlatList,Button,Switch} from 'react-native'
+import {View, Text, FlatList, Button, Switch, StyleSheet} from 'react-native'
 import TextInput from "../kitui/TextInput";
 import CompanieItem from "../components/CompanieItem";
 
@@ -35,7 +35,7 @@ class Home extends Component {
     render() {
         return (
             <View>
-                <Text>Home</Text>
+                <Text style={styles.text}>Accueil</Text>
                 <FlatList
                     data={this.state.companies}
                     renderItem={({item}) => <CompanieItem companie={item}/>}
@@ -61,5 +61,17 @@ class Home extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    text:{
+        textAlign: 'center',
+        fontStyle: 'italic',
+        color: '#7e7e7e',
+        fontWeight: 'bold',
+        fontSize: 32,
+        padding:5
+    }
+});
+
 
 export default Home;

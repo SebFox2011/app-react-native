@@ -27,15 +27,12 @@ class Search extends Component {
         return (
             <View>
                 <TextInput value={this.state.result} placeholder={'Entreprise à rechercher'}
-                           onChangeText={text => this.searchChangeText(text)}
-                />
+                           onChangeText={text => this.searchChangeText(text)}/>
                 <FlatList
                     data={this.state.companies}
                     renderItem={({item}) => <CompanieItem companie={item}
                           onClick={() => this.props.navigation.navigate('Company', {company:item})}/>}
-                    keyExtractor={(item, index) => index.toString()}
-
-                />
+                    keyExtractor={(item, index) => index.toString()}/>
             </View>
         );
     }
