@@ -5,16 +5,18 @@ import Home from "../screens/Home";
 import SearchNavigator from "./SearchNavigator";
 import NewCompany from "../screens/NewCompany";
 import Contact from "../screens/Contact";
+import Sensors from "../screens/Sensors";
 
 const AppNavigator = createDrawerNavigator(
     {
         Home: Home,
         Search:SearchNavigator,
         NewCompany: NewCompany,
+        Sensors:Sensors,
         Contact:Contact
     },
     {
-        initialRouteName:'Home'// route par défaut
+        initialRouteName:'Sensors'// route par défaut
     }// route de navigation
 );
 

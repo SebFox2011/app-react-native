@@ -44,3 +44,7 @@ https://reactnavigation.org/docs/en/headers.html
 ## linear gradient
 https://docs.expo.io/versions/latest/sdk/linear-gradient/
 
+## sensors
+https://docs.expo.io/versions/latest/sdk/accelerometer/
+npm install expo-sensors
+
