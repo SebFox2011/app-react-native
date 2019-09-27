@@ -54,3 +54,7 @@ expo install expo-permissions // permission d'accéder au gps
 
 ## Navigation tab
 npm install react-navigation-tabs
+
+## Image picker pour gérer les images ou la caméra
+https://docs.expo.io/versions/v35.0.0/sdk/imagepicker/
+expo install expo-image-picker
