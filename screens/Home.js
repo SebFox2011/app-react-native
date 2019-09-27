@@ -8,7 +8,8 @@ class Home extends Component {
         super(props);
         this.state = {
             companies : [],
-            page:1
+            page:1,
+            bool:false
         };
     }
 
@@ -34,7 +35,7 @@ class Home extends Component {
 
     render() {
         return (
-            <View>
+            <View style={styles.main_container}>
                 <Text style={styles.text}>Accueil</Text>
                 <FlatList
                     data={this.state.companies}
@@ -48,21 +49,26 @@ class Home extends Component {
                 <TextInput value={this.state.title} placeholder={'Ajouter le titre du film'}
                     onChangeText={text => this.setState({title:text})}
                 />
-                <Switch/>
+                <Switch value={this.state.bool} onValueChange={bool=>this.setState({bool:bool})}/>
                 <TextInput value={this.state.year} keyborardType='numeric'
                     onChangeText={text => this.setState({year:text})}
-                />
-                <Button
-                    title="Ajouter un film"
-                    color="#000"
-                    onPress={() => this.addFilm()} // fonction fléchée pour garder le contexte
                 />
             </View>
         );
     }
 }
 
+ /*<Button
+     title="Ajouter un film"
+     color="#000"
+     onPress={() => this.addFilm()} // fonction fléchée pour garder le contexte
+   />*/
+
+
 const styles = StyleSheet.create({
+    main_container: {
+        flex:1
+    },
     text:{
         textAlign: 'center',
         fontStyle: 'italic',

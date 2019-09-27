@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {View,Text,StyleSheet,ScrollView,Button} from "react-native";
+import {View,Text,StyleSheet,ScrollView,TouchableOpacity} from "react-native";
+import styles from "../Stylesheet";
 
 class Company extends Component {
     constructor(props) {
@@ -9,24 +10,26 @@ class Company extends Component {
         }
     }
 
-
-   /* static navigationOptions = ({navigation}) => {
-        return {
-            title: navigation.getParam('company').name
-        }
-    };*/
-
     static navigationOptions = ({ navigation }) => {
+        const company = navigation.getParam('company');
         return {
-            title: navigation.getParam('company').name,
-            headerRight: (<Button title="Supprimer" onPress={() => {
-                const company = navigation.getParam('company');
-                fetch(process.env.API_URL + '/companies/' + company._id, { method: 'delete' })
-                    .then(response => response.json())
-                    .then(data => navigation.navigate('Search'))
-                    .catch(err => console.log(err))
-                ;
-            }} />)
+            title: company.name,
+            headerRight: (
+                <View style={styles.btnHeaderContainer}>
+                    <TouchableOpacity style={[ styles.btn, styles.btnHeader, styles.btnDanger ]} onPress={() => {
+                        fetch(process.env.API_URL + '/companies/' + company._id, { method: 'delete' })
+                            .then(response => response.json())
+                            .then(data => navigation.navigate('Search'))
+                            .catch(err => console.log(err))
+                        ;
+                    }} >
+                        <Text style={styles.btnDangerText}>Supprimer</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={[ styles.btn, styles.btnHeader, styles.btnWarning ]} onPress={() => navigation.navigate('EditCompany', { company: company })}>
+                        <Text style={styles.btnWarningText}>Modifier</Text>
+                    </TouchableOpacity>
+                </View>
+            )
         }
     };
 
@@ -35,6 +38,8 @@ class Company extends Component {
         fetch(process.env.API_URL+'/companies/' + id, {
             method: 'delete'
         });
+        // Pour tester ajouter au render ce bouton
+        // <Button onPress={(id)=>this.delete(company._id)} title='supprimer'/>
     }
     render() {
         const company = this.props.navigation.getParam('company');
@@ -42,31 +47,30 @@ class Company extends Component {
         return (
             <ScrollView>
                 <View>
-                    <Text style={styles.text_name}>{company.name}</Text>
-                    <Button onPress={(id)=>this.delete(company._id)} title='supprimer'/>
+                    <Text style={style.text_name}>{company.name}</Text>
                 </View>
                 <View>
-                    <Text style={styles.text_category}>{company.category_code}</Text>
+                    <Text style={style.text_category}>{company.category_code}</Text>
                 </View>
-                <View style={styles.main_container}>
-                    <View style={styles.border}>
+                <View style={style.main_container}>
+                    <View style={style.border}>
                         <Text>Employees: {company.number_of_employees}</Text>
                         <Text>Founded in: {company.founded_year}</Text>
                         <Text>Money raised: {company.total_money_raised}</Text>
                     </View>
-                    <View style={styles.border}>
+                    <View style={style.border}>
                         <Text>Phone: {company.phone_number}</Text>
                         <Text>Mail: {company.email_address}</Text>
                         <Text>Website: {company.homepage_url}</Text>
                     </View>
                 </View>
-                <Text style={styles.description}>{company.overview}</Text>
+                <Text style={style.description}>{company.overview}</Text>
             </ScrollView>
         );
     }
 }
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
     main_container: {
         backgroundColor:'rgba(155,238,239,0.59)',
         flexDirection: 'row',
