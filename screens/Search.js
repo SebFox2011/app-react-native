@@ -19,7 +19,6 @@ class Search extends Component {
         title: 'Rechercher une entreprise',
         headerTitleStyle:{
             backgroundColor: '#f4511e',
-            headerTintColor: '#f0f',
             fontWeight: 'bold',
             textAlign:'left'
         },
@@ -36,10 +35,18 @@ class Search extends Component {
     }
 
     searchChangeText(text) {
-        fetch(process.env.API_URL + '/companies?search=' + text)
+
+        this.setState({result: text},()=>this.fetchCompagnies());
+    }
+    searchChangePage(page) {
+
+        this.setState({page: this.state.page + page},()=>this.fetchCompagnies());
+    }
+
+    fetchCompagnies(){
+        fetch(process.env.API_URL + '/companies?search=' + this.state.result + '&page='+this.state.page)
             .then(response => response.json())
             .then(companies => this.setState({companies: companies}));
-        this.setState({result: text})
     }
 
     render() {
@@ -55,8 +62,8 @@ class Search extends Component {
                         keyExtractor={(item, index) => index.toString()}/>
                 </View>
                 <View style={{flexDirection:'row',justifyContent:'space-around'}}>
-                    <Button title='<'/>
-                    <Button title='>'/>
+                    <Button onPress={()=>this.searchChangePage(-1)} title='<' disabled={this.state.page === 1}/>
+                    <Button onPress={()=>this.searchChangePage(1)} title='>'/>
                 </View>
             </View>
         );
