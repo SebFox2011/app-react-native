@@ -47,6 +47,10 @@ https://docs.expo.io/versions/latest/sdk/linear-gradient/
 ## sensors
 https://docs.expo.io/versions/latest/sdk/accelerometer/
 npm install expo-sensors // capteurs accelerometer et gyroscope
+
+https://docs.expo.io/versions/v32.0.0/sdk/location/
 expo install expo-location // gps
 expo install expo-permissions // permission d'accéder au gps
 
+## Navigation tab
+npm install react-navigation-tabs

@@ -5,14 +5,14 @@ import Home from "../screens/Home";
 import SearchNavigator from "./SearchNavigator";
 import NewCompany from "../screens/NewCompany";
 import Contact from "../screens/Contact";
-import Sensors from "../screens/Sensors";
+import SensorTabNavigator from "./SensorTabNavigator";
 
 const AppNavigator = createDrawerNavigator(
     {
         Home: Home,
         Search:SearchNavigator,
         NewCompany: NewCompany,
-        Sensors:Sensors,
+        Sensors:SensorTabNavigator,
         Contact:Contact
     },
     {
