@@ -14,6 +14,8 @@ class Sensors extends Component {
     }
 
     componentDidMount() {
+        Accelerometer.setUpdateInterval(100);
+        Gyroscope.setUpdateInterval(100); // Mise en place de l'interval de mesure
         this.accelerometerSubscription = Accelerometer.addListener(
             data => this.setState({accelerometerData:data}));
         this.gyroscopeSubscription = Gyroscope.addListener(
