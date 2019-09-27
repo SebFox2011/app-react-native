@@ -14,6 +14,9 @@ class Company extends Component {
         const company = navigation.getParam('company');
         return {
             title: company.name,
+            headerTitleStyle:{
+                textAlign:'left'
+            },
             headerRight: (
                 <View style={styles.btnHeaderContainer}>
                     <TouchableOpacity style={[ styles.btn, styles.btnHeader, styles.btnDanger ]} onPress={() => {
