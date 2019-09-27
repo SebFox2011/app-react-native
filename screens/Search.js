@@ -30,13 +30,14 @@ class Search extends Component {
         this.state = {
             result: '',
             companies: [],
-            page:1
+            page:1,
+            count:0
         };
     }
 
     searchChangeText(text) {
 
-        this.setState({result: text},()=>this.fetchCompagnies());
+        this.setState({result: text,page:1},()=>this.fetchCompagnies());
     }
     searchChangePage(page) {
 
@@ -46,7 +47,7 @@ class Search extends Component {
     fetchCompagnies(){
         fetch(process.env.API_URL + '/companies?search=' + this.state.result + '&page='+this.state.page)
             .then(response => response.json())
-            .then(companies => this.setState({companies: companies}));
+            .then(data => this.setState({companies: data.companies,count:data.count,limit:data.limit}));
     }
 
     render() {
@@ -63,7 +64,7 @@ class Search extends Component {
                 </View>
                 <View style={{flexDirection:'row',justifyContent:'space-around'}}>
                     <Button onPress={()=>this.searchChangePage(-1)} title='<' disabled={this.state.page === 1}/>
-                    <Button onPress={()=>this.searchChangePage(1)} title='>'/>
+                    <Button onPress={()=>this.searchChangePage(1)} title='>' disabled={(this.state.page*this.state.limit) >= this.state.count}/>
                 </View>
             </View>
         );
