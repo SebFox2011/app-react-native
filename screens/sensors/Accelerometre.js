@@ -9,6 +9,10 @@ class Accelerometre extends Component {
         super(props);
         this.state = {
             accelerometerData: {}, // déclaré comme objet (clé, valeur)
+            position:{
+                top:100,
+                left:100
+            }
         }
     }
 
@@ -33,6 +37,7 @@ class Accelerometre extends Component {
             <View>
                 <Text>Accéléromètre</Text>
                 <SensorItem data={this.state.accelerometerData} />
+                <View style={styles.square} />
             </View>
         );
     }
@@ -50,6 +55,12 @@ const styles = StyleSheet.create({
         fontSize: 18,
         textAlign: 'center',
     },
+    square: {
+        width: 50,
+        height: 50,
+        backgroundColor: 'red',
+        borderRadius:50
+    }
 });
 
 export default Accelerometre;

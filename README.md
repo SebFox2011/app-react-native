@@ -58,3 +58,11 @@ npm install react-navigation-tabs
 ## Image picker pour gérer les images ou la caméra
 https://docs.expo.io/versions/v35.0.0/sdk/imagepicker/
 expo install expo-image-picker
+
+## pour créer un fichier apk redistribuable
+expo build:android -t apk
+cette commande lance le process de build sur le server distant de expo (attention pour compiler et télécharger prévoir 3h !!)
+une fois télécharger, installer via le packager android. Attention le play store ne reconnait l'application, faire installer
+quand meme.
+
+utiliser la clé "clé apk android" pour signer l'application
