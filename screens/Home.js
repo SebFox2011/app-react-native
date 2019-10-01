@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {View, Text, FlatList, Button, Switch, StyleSheet} from 'react-native'
+import {View, Text, FlatList, StyleSheet, Switch} from 'react-native'
 import TextInput from "../kitui/TextInput";
 import CompanieItem from "../components/CompanieItem";
+import { Button} from 'native-base';
 
 class Home extends Component {
     constructor(props) {
@@ -42,10 +43,12 @@ class Home extends Component {
                     renderItem={({item}) => <CompanieItem companie={item}/>}
                     keyExtractor={(item,index) => index.toString()}
                 />
-                <Button
+
+                <Button primary
                     onPress={() => this.setState({page : this.state.page +1},
-                        ()=> this.fetchCompanies())}
-                    title={'Charger la suite'}/>
+                        ()=> this.fetchCompanies())}>
+                    <Text>Charger la suite</Text>
+                </Button>
                 <TextInput value={this.state.title} placeholder={'Ajouter le titre du film'}
                     onChangeText={text => this.setState({title:text})}
                 />

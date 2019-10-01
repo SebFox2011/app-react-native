@@ -66,3 +66,7 @@ une fois télécharger, installer via le packager android. Attention le play sto
 quand meme.
 
 utiliser la clé "clé apk android" pour signer l'application
+
+## Installation de NativeBase (bootstrap) pour react native
+npm install native-base --save
+import { ...} from 'native-base';
