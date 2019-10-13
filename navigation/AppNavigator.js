@@ -16,7 +16,7 @@ const AppNavigator = createDrawerNavigator(
         Contact:Contact
     },
     {
-        initialRouteName:'Sensors'// route par défaut
+        initialRouteName:'Home'// route par défaut
     }// route de navigation
 );
 
